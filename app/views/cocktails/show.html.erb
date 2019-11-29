@@ -1,15 +1,16 @@
 <div class = "container">
   <h1><%= @cocktail.name.capitalize %></h1>
-
+  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+  <br>
   <% @cocktail.doses.each do |dose|%>
-    <p><%= dose.description %>-<%= dose.ingredient.name %><%= link_to "Delete", dose_path(dose),class: "btn-delete", method: :delete, data: { confirm: "Are you sure?" } %></p>
+  <p><%= dose.description %>-<%= dose.ingredient.name %><%= link_to "Delete", dose_path(dose),class: "btn-delete", method: :delete, data: { confirm: "Are you sure?" } %></p>
   <% end %>
-
   <%= link_to "Back", cocktails_path,class: "btn btn-gradient" %>
-<div class="dose-form">
+  <div class="dose-form">
     <%= simple_form_for([@cocktail,@dose]) do |f| %>
-    <%= f.association :ingredient, prompt: "Choose the ingredients" %>
+    <%= f.association :ingredient%>
     <%= f.input :description %>
     <%= f.submit%>
-    <% end %></div>
+    <% end %>
   </div>
+</div>

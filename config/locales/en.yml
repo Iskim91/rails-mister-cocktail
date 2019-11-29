@@ -1,1 +1,3 @@
-CLOUDINARY_URL=cloudinary://822857949453519:aroZXEO5kUdGeTg18v72cCwzKFE@djjnnsqxp
+
+en:
+  hello: "Hello World"
