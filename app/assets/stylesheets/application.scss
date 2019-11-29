@@ -11,3 +11,29 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body{
+  background-color: #0C3767;
+  color:white;
+}
+h4{
+    color:black;
+    margin-left: 2px;
+}
+
+.container{
+  margin:0 auto;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  margin:24px;
+}
+
+.container p{
+  margin-top: 8px;
+}
+.dose-form{
+  margin-top: 50%;
+}
