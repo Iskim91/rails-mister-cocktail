@@ -3,7 +3,7 @@
   <div class ="doses-list">
     <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill%>
     <% @cocktail.doses.each do |dose|%>
-    <div class = "does-instructions">
+    <div class = "dose-instructions">
       <ol>
        <li>
          <p ><%= dose.ingredient.name.capitalize %>-  <%= dose.description %>   <%= link_to "Delete", dose_path(dose),class: "btn-delete", method: :delete, data: { confirm: "Are you sure?" } %></p>
